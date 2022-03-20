@@ -1,0 +1,547 @@
+body {
+    font-family: 'FrutigerLTW02-45Light', 'Arial', sans-serif;
+    padding-top: 50px;
+    font-weight: normal;
+    line-height: 1.5rem;
+    color: #1c1c1c;
+}
+
+h2,
+h3,
+h4 {
+    font-weight: normal;
+}
+
+p:last-of-type {
+    margin: 0;
+}
+
+strong,
+b,
+.font-weight-bold {
+    /*font-weight: 600;*/
+    font-family: 'Frutiger LT W02 65 Bold', 'Arial', sans-serif;
+    font-weight: normal !important;
+}
+
+em,
+i {
+    font-family: 'FrutigerLTW02-46LightIt', 'Arial', sans-serif;
+    font-weight: normal;
+}
+
+a {
+    color: #077099;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #074099;
+}
+
+a.btn,
+a.nav-link,
+a.dropdown-item {
+    text-decoration: none;
+}
+
+.card {
+    margin-bottom: 2.0rem;
+}
+
+.bg-light {
+    background-color: #efefef !important;
+}
+
+.jumbotron .container h1 {
+    line-height: 0.85em;
+    margin-bottom: 0.15em;
+    /*letter-spacing: -0.03em;*/
+}
+
+
+/* Keyline and infoline on content pages*/
+
+div.page-head h1 {
+    line-height: 1.0em;
+}
+
+@media only screen and (max-width: 767px) {
+    div.page-head h1 {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    div.page-head h1 {
+        font-size: 2.5em;
+    }
+}
+
+div.page-head .infoline {
+    font-size: 1.3em;
+    line-height: 1.2em;
+}
+
+div.page-head .infoline b,
+div.page-head .infoline strong {
+    font-family: 'FrutigerLTW02-45Light', 'Arial', sans-serif !important;
+    color: #f60000 !important;
+}
+
+.blockquote {
+    display: block;
+    font-size: 1.5em;
+    line-height: normal;
+    /*background-color:antiquewhite;*/
+    padding: 0.7rem;
+    margin: 1.5rem 0;
+    color: #4F4F4F;
+}
+
+.blockquote:before {
+    content: "\201C";
+    font-size: 4.0em;
+    line-height: 0;
+    margin: 0.4em 0 0 -0.1em;
+    display: block;
+    position: absolute;
+    color: #4F4F4F;
+}
+
+.blockquote p {
+    margin-left: 2.0em;
+    margin-top: 0px;
+}
+
+.blockquote .citation {
+    font-size: 0.65em;
+    line-height: normal;
+    margin: 0.6em 0 0 3.0em;
+    font-family: 'Frutiger LT W02 65 Bold', 'Arial', sans-serif;
+    font-weight: normal;
+}
+
+.blockquote .citation:before {
+    content: "\2014";
+}
+
+.lead {
+    font-family: 'FrutigerLTW02-45Light', 'Arial', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    /*letter-spacing: -0.03em;*/
+}
+
+.lead strong,
+.lead b {
+    font-family: 'Frutiger LT W02 65 Bold', 'Arial', sans-serif;
+}
+
+p.eyebrow {
+    margin-bottom: 0.5rem;
+    line-height: normal;
+}
+
+ul,
+ol {
+    margin-left: 0;
+    padding-left: 1rem
+}
+
+
+/* Removes borders and rounded corners from cards*/
+
+div.card,
+img.card-img-top {
+    border-radius: 0;
+}
+
+div.noborder,
+div.bg-light {
+    border: 0 !important;
+}
+
+
+/* Light gray background adjustments*/
+
+div.card.bg-light {
+    display: block;
+}
+
+div.card.bg-light>div.card-body {
+    padding-top: 1rem;
+}
+
+div.bg-light>img.card-img-top {
+    padding: 1rem 1rem 0 1rem;
+}
+
+div.bg-light iframe.embed-responsive-item {
+    padding: 1rem 1rem 0 1rem !important;
+}
+
+div.noborder div.card-body {
+    padding: 1.0rem 0 1.0rem 0;
+}
+
+a[href$=".pdf"]:after {
+    font-family: 'Material Design Icons';
+    content: "\F0225";
+    font-weight: normal;
+    font-size: 1em;
+    margin-left: .15em;
+    text-decoration: none !important;
+    display: inline-block;
+}
+
+
+/******* Sign Post Button *******/
+
+div.signpost-wrapper {
+    display: table;
+    float: none;
+    margin: 0;
+    margin-top: 0.75em;
+    padding: 0;
+}
+
+.signpost {
+    /* our rectangle */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1em;
+    line-height: 1.5em;
+    display: flex;
+    max-width: 300px;
+    min-width: 110px;
+    height: 40px;
+    background-color: darkred;
+    margin: 10px 0;
+    position: relative;
+    cursor: pointer;
+    border-radius: 3px 0 0 3px;
+    float: left;
+}
+
+.signpost:after {
+    /*  our pseudo-element */
+    content: "";
+    /* required */
+    position: absolute;
+    /* takes the 'cap' out of flow */
+    top: 0;
+    /* stick it to top edge of the sign */
+    left: 100%;
+    /* push it way overto the right*/
+    height: 0;
+    /* we're doing this with borders remember */
+    width: 0;
+    border-width: 20px 10px;
+    border-style: solid;
+    border-color: darkred;
+    /* same as bg of our rectangle */
+    /* now we make some of the borders disappear*/
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+
+
+/* make the hover */
+
+.signpost:hover {
+    background-color: brown;
+}
+
+.signpost:hover:after {
+    border-color: brown;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+
+
+/* position and style the text */
+
+.signpost a span {
+    color: white;
+    display: block;
+    height: 30px;
+    position: relative;
+    text-align: left;
+    padding: 11px 11px 11px 7px;
+    line-height: normal;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: auto;
+}
+
+
+/* Position the icon */
+
+.signpost a span.fas {
+    display: block;
+    float: left;
+    font-size: 1.0em;
+    color: #ffffff;
+    padding: 12px 0 11px 11px;
+}
+
+.signpost a span.mdi {
+    display: block;
+    float: left;
+    font-size: 1.1em;
+    color: #ffffff;
+    padding: 10px 0 11px 11px;
+}
+
+
+/* prevent any weirdness in the link */
+
+.signpost a {
+    display: block;
+    text-decoration: none !important;
+    color: white;
+}
+
+
+/********* end cta signpost button *********/
+
+
+/********** Collapsible tabs/accordion ********5*/
+
+.tab-accordion .nav-tabs {
+    display: none;
+}
+
+.tab-accordion .tab-pane .card-body {
+    padding: 15px !important;
+}
+
+@media(min-width:768px) {
+    .tab-accordion .nav-tabs {
+        display: flex;
+    }
+    .tab-accordion .card {
+        border: none;
+    }
+    .tab-accordion .card .card-header {
+        display: none;
+    }
+    .tab-accordion .card .collapse {
+        display: block;
+    }
+    .tab-accordion .nav-tabs .nav-link {
+        color: #1c1c1c;
+        border-radius: 0;
+        border: 0;
+    }
+    .tab-accordion .nav-tabs .active {
+        background-color: #efefef !important;
+    }
+}
+
+@media(max-width:767px) {
+    .tab-accordion .tab-content {
+        border: 0 none;
+    }
+    .tab-accordion .tab-content>.tab-pane {
+        display: block !important;
+        opacity: 1;
+    }
+    .tab-accordion .tab-content .card {
+        margin: 0;
+        border: 0 none;
+        overflow: visible;
+        margin-bottom: -2px;
+    }
+    .tab-accordion .tab-pane .card-header {
+        border-bottom: 1px solid #ebebeb;
+        border-top: 1px solid #ebebeb;
+    }
+    .tab-accordion .tab-pane>.card-header>a {
+        text-decoration: none !important;
+        color: #1c1c1c !important;
+    }
+    .tab-accordion .tab-pane>.card-header>a>h2 {
+        font-size: 1.0rem !important;
+        padding: 0.15rem
+    }
+    .tab-accordion .tab-pane>.card-header>a>h2:before {
+        font-family: 'Material Design Icons';
+        content: "\F0143";
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 1.0rem;
+        color: #1c1c1c;
+        margin: 0.3rem 0.3rem 0 -0.7rem;
+    }
+    .tab-accordion .tab-pane>.card-header>a.collapsed>h2:before {
+        font-family: 'Material Design Icons';
+        content: "\F0140";
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 1.0rem;
+        color: #1c1c1c;
+        margin: 0.3rem 0.3rem 0 -0.7rem;
+    }
+    .tab-accordion .tab-pane>.card-header:first-child {
+        border-radius: 0;
+    }
+}
+
+
+/* regular Accordion */
+
+.accordion .card {
+    margin: 0;
+    border: 0 none;
+    overflow: visible;
+    margin-bottom: -2px;
+}
+
+.accordion .card .card-header {
+    border: 0 none;
+    border-bottom: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
+    padding: 0.7rem 1rem 0.7rem 0;
+}
+
+.accordion .card .card-body {
+    padding: 15px;
+}
+
+.accordion .btn {
+    color: #1c1c1c;
+    text-decoration: none;
+    padding: 0;
+    box-shadow: none;
+}
+
+.accordion .btn:before {
+    font-family: 'Material Design Icons';
+    content: "\F0143";
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.0rem;
+    color: #1c1c1c;
+    margin: 0.3rem 0 0 0.5rem;
+}
+
+.accordion .collapsed:before {
+    font-family: 'Material Design Icons';
+    content: "\F0140";
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.0rem;
+    color: #1c1c1c;
+    margin: 0.3rem 0 0 0.5rem;
+}
+
+
+/* Linklist link */
+
+ul.linklist {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+    line-height: 1.23em;
+    margin-top: 0.5em;
+}
+
+ul.linklist li {
+    margin-bottom: 0.5em;
+    margin-left: 1.1em;
+}
+
+ul.linklist li:before {
+    /*font-family: 'Font Awesome\ 5 Free';*/
+    font-family: 'Material Design Icons';
+    content: "\F0142";
+    font-weight: normal;
+    font-size: 1.0em;
+    line-height: 1.0em;
+    color: #077099;
+    margin: 0.3em 0.3em 0 -1.4em;
+}
+
+ul.linklist li:last-of-type {
+    margin-bottom: 0;
+}
+
+ul.linklist li.dl:before {
+    content: "\F01DA";
+}
+
+ul.linklist li.pod:before {
+    content: "\F0994";
+}
+
+ul.linklist li.vid:before {
+    content: "\F0567";
+}
+
+ul.linklist li.pdf:before {
+    content: "\F0E2D";
+}
+
+ul.linklist li a,
+ul.linklist li a:link {
+    text-decoration: none;
+    color: #077099;
+    font-family: 'Frutiger LT W02 65 Bold', 'Arial', sans-serif;
+    font-weight: 100;
+}
+
+ul.linklist li a:hover {
+    color: #08347a;
+}
+
+footer {
+    padding: 25px;
+    margin: 10px 10px 0 10px;
+    background-color: rgb(233, 233, 233);
+}
+
+footer a {
+    color: gray;
+}
+
+footer a:hover {
+    color: #1c1c1c;
+}
+
+
+/* horizontal menu in footer */
+
+footer ul.menu {
+    margin-left: 0
+}
+
+footer ul.menu li.list-inline-item {
+    border-right: 1px solid gray;
+    padding: 0px 7px;
+    margin: 0;
+    line-height: 1em;
+}
+
+footer ul.menu li.list-inline-item:first-child {
+    padding: 0 7px 0 0;
+}
+
+footer ul.menu li.list-inline-item:last-child {
+    border-right: 0;
+}
+
+footer ul.menu li.list-inline-item a {
+    text-decoration: none;
+    font-family: 'Frutiger LT W02 65 Bold', 'Arial', sans-serif;
+}
+
+footer ul.menu li.list-inline-item a:hover {
+    text-decoration: underline;
+    font-family: 'Frutiger LT W02 65 Bold', 'Arial', sans-serif;
+}
