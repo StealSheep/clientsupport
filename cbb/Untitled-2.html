@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The purposeful legacy</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700&amp;subset=devanagari,latin-ext" rel="stylesheet">
+    <style>
+        html,
+        body {
+            text-align: center;
+            margin: 1em;
+            font-family: 'Hind', sans-serif;
+        }
+        
+        .container {
+            text-align: left;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 25px;
+            max-width: 1000px;
+            min-width: 480px;
+            border: 1px solid #bebebe;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        p {
+            font-weight: normal;
+        }
+        
+        h1 {
+            margin: 0 0 0.5em 0;
+            font-weight: 300;
+            font-size: 4em;
+            letter-spacing: -0.03em;
+            line-height: 1em;
+        }
+        
+        h2 {
+            margin: 0 0 0.5em 0;
+            font-weight: 300;
+        }
+        
+        h3 {
+            margin: 1.25em 0 -0.5em 0;
+            font-weight: 300;
+        }
+        
+        h4 {
+            margin: 1.25em 0 -0.5em 0;
+            font-weight: 500;
+        }
+        
+        p {
+            font-size: 0.85em;
+            line-height: 1.40em;
+            font-weight: 400;
+        }
+        
+        a,
+        a:link {
+            color: cadetblue;
+            transition: color 0.5s;
+        }
+        
+        a:hover {
+            color: darkslateblue;
+            transition: color 0.5s;
+        }
+        
+        blockquote {
+            font-size: 1.3em;
+            line-height: 1.2em;
+            font-weight: 300 !important;
+            color: DimGray;
+        }
+        
+        .quote {
+            /*display: block;*/
+            padding: 0.3em 1em;
+            background-color: antiquewhite;
+            clear: both;
+            quotes: "“" "”" "‘" "’";
+        }
+        
+        .quote::before {
+            content: open-quote;
+            display: block;
+            font-size: 5em;
+            margin-bottom: -1.5em;
+            margin-top: 0em;
+            margin-left: 0.05em;
+            color: darkgrey;
+        }
+        
+        .quote::after {
+            content: close-quote;
+            display: block;
+            font-size: 5em;
+            margin-bottom: 0em;
+            margin-top: -1.45em;
+            text-align: right;
+            margin-right: 0.1em;
+            color: darkgrey;
+        }
+        
+        .quote .attrib {
+            font-weight: 500;
+            font-size: 0.8em;
+            /*text-align: right;*/
+            display: block;
+            clear: both;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>The purposeful legacy</h1>
+        </header>
+        <article>
+            <h2>Test title</h2>
+            <div class="quote">
+                <blockquote>&quot;Hind&quot; is an &quot;Open Source&quot; typeface supporting the Devanagari and Latin scripts. Developed explicitly for use in User Interface design, the Hind font family includes five styles. Hind's letterforms have a humanist-style
+                    construction, which is paired with seemingly monolinear strokes. I constructed this completely wrong. The &quot;blockquote&quot; tag shoud contain a paragrah with the quote and "footer" with the attribution in it. Dope...
+                    <br/>
+                    <br/>
+                    <span class="attrib">&#8212;Some really important
+                        <a href="http://google.com">guy</a>
+                    </span>
+                </blockquote>
+            </div>
+            <h3>Test title</h3>
+            <p>"The Devanagari and Latin script" components are scaled in relation to each other so that the Devanagari headline falls just below the Latin capital-height. In other words, the Devanagari
+                <a href="http://jacklamb.design" target="_blank">base characters are 94% as tall as the Latin uppercase</a>. Text set in the Devanagari script sits nicely alongside the Latin lowercase, too. Hind's Devanagari vowel marks take forms that
+                tends toward the traditional end of the design spectrum, while the knotted terminals inside of the base characters feature a treatment that appears more contemporary.</p>
+            <h4>Test title</h4>
+            <p>The Devanagari and Latin script components are scaled in relation to each other so that the Devanagari headline falls just below the Latin capital-height. In other words, the Devanagari base characters are 94% as tall as the Latin uppercase.
+                Text set in the Devanagari script sits nicely alongside the Latin lowercase, too. Hind's Devanagari vowel marks take forms that tends toward the traditional end of the design spectrum, while the knotted terminals inside of the base characters
+                feature a treatment that appears more contemporary.</p>
+        </article>
+        <menu> </menu>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- Curlies -->
+<script src="js/smartquotes.min.js"></script>
+<script>
+    smartquotes()
+</script>
+
+</html>
